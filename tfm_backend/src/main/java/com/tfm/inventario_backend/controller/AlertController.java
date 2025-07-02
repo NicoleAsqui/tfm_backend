@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -31,6 +32,7 @@ public class AlertController {
 
     @PostMapping
     public Alert create(@RequestBody Alert alert) {
+        alert.setId(UUID.randomUUID().toString());
         return alertRepository.save(alert);
     }
 

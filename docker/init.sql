@@ -14,7 +14,7 @@ CREATE TABLE alert (
 
 -- Create table for Movement model
 CREATE TABLE movement (
-                          id BIGINT PRIMARY KEY,
+                          id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
                           fecha DATE,
                           producto VARCHAR(255),
                           tipo VARCHAR(50),
@@ -53,11 +53,11 @@ INSERT INTO alert VALUES
 
 -- Insert data into movement table
 INSERT INTO movement VALUES
-                         (1, '2023-05-15', 'Vino Tinto Reserva', 'egreso', 'degustacion', 5, 8.50, 42.50, 'Tienda Centro', 'Juan P\\u00e9rez', 'Cliente VIP 001', 'Degustaci\\u00f3n para cliente preferencial', 'Mar\\u00eda Gonz\\u00e1lez'),
-                         (2, '2023-05-16', 'Whisky 12 a\\u00f1os', 'egreso', 'promocion', 2, 25.00, 50.00, 'Tienda Norte', 'Ana L\\u00f3pez', 'N/A', 'Promoci\\u00f3n de lanzamiento', 'Carlos Ruiz'),
-                         (3, '2023-05-17', 'Cerveza Artesanal', 'egreso', 'merma', 12, 1.80, 21.60, 'Tienda Sur', 'Luis Mart\\u00ednez', 'N/A', 'Caducidad', 'Sistema'),
-                         (4, '2023-05-18', 'Ron A\\u00f1ejo', 'egreso', 'devolucion', 1, 30.00, 30.00, 'Tienda Centro', 'Pedro S\\u00e1nchez', 'Cliente Regular 045', 'Producto defectuoso', 'Mar\\u00eda Gonz\\u00e1lez'),
-                         (5, '2023-05-19', 'Vino Blanco', 'ingreso', 'compra', 50, 6.00, 300.00, 'Tienda Centro', 'Sistema', 'N/A', 'Reabastecimiento', 'N/A');
+                         ('2023-05-15', 'Vino Tinto Reserva', 'egreso', 'degustacion', 5, 8.50, 42.50, 'Tienda Centro', 'Juan P\\u00e9rez', 'Cliente VIP 001', 'Degustaci\\u00f3n para cliente preferencial', 'Mar\\u00eda Gonz\\u00e1lez'),
+                         ('2023-05-16', 'Whisky 12 a\\u00f1os', 'egreso', 'promocion', 2, 25.00, 50.00, 'Tienda Norte', 'Ana L\\u00f3pez', 'N/A', 'Promoci\\u00f3n de lanzamiento', 'Carlos Ruiz'),
+                         ('2023-05-17', 'Cerveza Artesanal', 'egreso', 'merma', 12, 1.80, 21.60, 'Tienda Sur', 'Luis Mart\\u00ednez', 'N/A', 'Caducidad', 'Sistema'),
+                         ('2023-05-18', 'Ron A\\u00f1ejo', 'egreso', 'devolucion', 1, 30.00, 30.00, 'Tienda Centro', 'Pedro S\\u00e1nchez', 'Cliente Regular 045', 'Producto defectuoso', 'Mar\\u00eda Gonz\\u00e1lez'),
+                         ('2023-05-19', 'Vino Blanco', 'ingreso', 'compra', 50, 6.00, 300.00, 'Tienda Centro', 'Sistema', 'N/A', 'Reabastecimiento', 'N/A');
 
 -- Insert data into inventory table with adapted mapping:
 -- id: casted as text, nombre from product, precio_compra from unit_price,

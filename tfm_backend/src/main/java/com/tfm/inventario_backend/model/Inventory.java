@@ -3,6 +3,10 @@ package com.tfm.inventario_backend.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import org.hibernate.annotations.GenericGenerator;
+
 import java.time.LocalDate;
 
 @Entity
@@ -10,6 +14,8 @@ import java.time.LocalDate;
 public class Inventory {
 
     @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     private String nombre;
     private String categoria;
