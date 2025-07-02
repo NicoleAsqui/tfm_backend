@@ -52,12 +52,15 @@ INSERT INTO alert VALUES
                       ('ALERT_4', 'caducidad', 'alta', 1745107200, 'Productos caducados en Metr\\u00f3polis', '3 lotes caducaron en el último mes', '{"punto_venta": "Metr\\u00f3polis", "productos": [{"nombre": "Cerveza Artesanal IPA", "lote": "CA-2024-001", "caducidad": "2025-04-05", "stock": 8}, {"nombre": "Ginebra Premium", "lote": "GP-2024-001", "caducidad": "2025-04-12", "stock": 5}, {"nombre": "Vodka Importado", "lote": "VI-2024-001", "caducidad": "2025-04-18", "stock": 3}]}', true);
 
 -- Insert data into movement table
-INSERT INTO movement VALUES
-                         ('2023-05-15', 'Vino Tinto Reserva', 'egreso', 'degustacion', 5, 8.50, 42.50, 'Tienda Centro', 'Juan P\\u00e9rez', 'Cliente VIP 001', 'Degustaci\\u00f3n para cliente preferencial', 'Mar\\u00eda Gonz\\u00e1lez'),
-                         ('2023-05-16', 'Whisky 12 a\\u00f1os', 'egreso', 'promocion', 2, 25.00, 50.00, 'Tienda Norte', 'Ana L\\u00f3pez', 'N/A', 'Promoci\\u00f3n de lanzamiento', 'Carlos Ruiz'),
-                         ('2023-05-17', 'Cerveza Artesanal', 'egreso', 'merma', 12, 1.80, 21.60, 'Tienda Sur', 'Luis Mart\\u00ednez', 'N/A', 'Caducidad', 'Sistema'),
-                         ('2023-05-18', 'Ron A\\u00f1ejo', 'egreso', 'devolucion', 1, 30.00, 30.00, 'Tienda Centro', 'Pedro S\\u00e1nchez', 'Cliente Regular 045', 'Producto defectuoso', 'Mar\\u00eda Gonz\\u00e1lez'),
-                         ('2023-05-19', 'Vino Blanco', 'ingreso', 'compra', 50, 6.00, 300.00, 'Tienda Centro', 'Sistema', 'N/A', 'Reabastecimiento', 'N/A');
+INSERT INTO movement (
+    fecha, producto, tipo, categoria, cantidad, costo_unitario, costo_total,
+    punto_venta, responsable, cliente, motivo, aprobado_por
+) VALUES
+('2023-05-15', 'Vino Tinto Reserva', 'egreso', 'degustacion', 5, 8.50, 42.50, 'Tienda Centro', 'Juan Pérez', 'Cliente VIP 001', 'Degustación para cliente preferencial', 'María González'),
+('2023-05-16', 'Whisky 12 años', 'egreso', 'promocion', 2, 25.00, 50.00, 'Tienda Norte', 'Ana López', 'N/A', 'Promoción de lanzamiento', 'Carlos Ruiz'),
+('2023-05-17', 'Cerveza Artesanal', 'egreso', 'merma', 12, 1.80, 21.60, 'Tienda Sur', 'Luis Martínez', 'N/A', 'Caducidad', 'Sistema'),
+('2023-05-18', 'Ron Añejo', 'egreso', 'devolucion', 1, 30.00, 30.00, 'Tienda Centro', 'Pedro Sánchez', 'Cliente Regular 045', 'Producto defectuoso', 'María González'),
+('2023-05-19', 'Vino Blanco', 'ingreso', 'compra', 50, 6.00, 300.00, 'Tienda Centro', 'Sistema', 'N/A', 'Reabastecimiento', 'N/A');
 
 -- Insert data into inventory table with adapted mapping:
 -- id: casted as text, nombre from product, precio_compra from unit_price,

@@ -17,7 +17,7 @@ CREATE TABLE inventory (
 
 -- Table for Movement entity
 CREATE TABLE movement (
-                          id BIGINT PRIMARY KEY,
+                          id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
                           fecha DATE,
                           producto VARCHAR(255),
                           tipo VARCHAR(100),
