@@ -1,0 +1,12 @@
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/InventarioBackendApplication.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/config/SecurityConfig.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/config/WebConfig.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/controller/AlertController.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/controller/InventoryController.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/controller/MovementController.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/model/Alert.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/model/Inventory.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/model/Movement.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/repository/AlertRepository.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/repository/InventoryRepository.java
+/Users/oscarlucas/Documents/unir/TFM_QUICKLOOK/tfm_backend/src/main/java/com/tfm/inventario_backend/repository/MovementRepository.java

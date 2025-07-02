@@ -1,0 +1,12 @@
+com/tfm/inventario_backend/config/WebConfig.class
+com/tfm/inventario_backend/repository/AlertRepository.class
+com/tfm/inventario_backend/model/Inventory.class
+com/tfm/inventario_backend/config/SecurityConfig.class
+com/tfm/inventario_backend/InventarioBackendApplication.class
+com/tfm/inventario_backend/repository/InventoryRepository.class
+com/tfm/inventario_backend/controller/AlertController.class
+com/tfm/inventario_backend/model/Movement.class
+com/tfm/inventario_backend/controller/InventoryController.class
+com/tfm/inventario_backend/repository/MovementRepository.class
+com/tfm/inventario_backend/model/Alert.class
+com/tfm/inventario_backend/controller/MovementController.class
