@@ -12,3 +12,8 @@
 
    ```bash
    docker-compose up --build
+3. Testing endpoints:
+   ```bash
+   http://localhost:8080/api/movements
+   http://localhost:8080/api/alerts
+   http://localhost:8080/api/investments
