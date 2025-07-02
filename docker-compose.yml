@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  app_quicklook:
+    build: tfm_backend
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:postgresql://inventario-backend:5432/inventario-backend?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    restart: always
+    depends_on:
+      inventario-backend:
+        condition: service_healthy
+  inventario-backend:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_ROOT_PASSWORD: 1234
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: inventario-backend
+    volumes:
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      timeout: 10s
+      retries: 10
